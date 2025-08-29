@@ -22,7 +22,7 @@ importers:
         version: link:../../packages/data-ops
       ai:
         specifier: ^4.3.16
-        version: 4.3.16(react@19.1.0)(zod@3.25.67)
+        version: 4.3.19(react@19.1.0)(zod@3.25.67)
       hono:
         specifier: ^4.9.4
         version: 4.9.4
@@ -2527,8 +2527,8 @@ packages:
     resolution: {integrity: sha512-jRR5wdylq8CkOe6hei19GGZnxM6rBGwFl3Bg0YItGDimvjGtAvdZk4Pu6Cl4u4Igsws4a1fd1Vq3ezrhn4KmFw==}
     engines: {node: '>= 14'}
 
-  ai@4.3.16:
-    resolution: {integrity: sha512-KUDwlThJ5tr2Vw0A1ZkbDKNME3wzWhuVfAOwIvFUzl1TPVDFAXDFTXio3p+jaKneB+dKNCvFFlolYmmgHttG1g==}
+  ai@4.3.19:
+    resolution: {integrity: sha512-dIE2bfNpqHN3r6IINp9znguYdhIOheKW2LDigAMrgt/upT3B8eBGPSCblENvaZGoq+hxaN9fSMzjWpbqloP+7Q==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18 || ^19 || ^19.0.0-rc
@@ -2698,8 +2698,8 @@ packages:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
 
-  chalk@5.4.1:
-    resolution: {integrity: sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==}
+  chalk@5.6.0:
+    resolution: {integrity: sha512-46QrSQFyVSEyYAgQ22hQ+zDa60YHA4fBstHmtSApj1Y5vKtG27fWowW03jCk5KcbXEWPZUIR894aARCA/G1kfQ==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
 
   check-error@2.1.1:
@@ -4016,8 +4016,8 @@ packages:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
 
-  swr@2.3.3:
-    resolution: {integrity: sha512-dshNvs3ExOqtZ6kJBaAsabhPdHyeY4P2cKwRCniDVifBMoG/SVI7tfLWqPXriVspf2Rg4tPzXJTnwaihIeFw2A==}
+  swr@2.3.6:
+    resolution: {integrity: sha512-wfHRmHWk/isGNMwlLGlZX5Gzz/uTgo0o2IRuTMcf4CPuPFJZlq0rDaKUx+ozB5nBOReNV1kiOyzMfj+MBMikLw==}
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -4596,7 +4596,7 @@ snapshots:
       '@ai-sdk/provider-utils': 2.2.8(zod@3.25.67)
       '@ai-sdk/ui-utils': 1.2.11(zod@3.25.67)
       react: 19.1.0
-      swr: 2.3.3(react@19.1.0)
+      swr: 2.3.6(react@19.1.0)
       throttleit: 2.1.0
     optionalDependencies:
       zod: 3.25.67
@@ -6527,7 +6527,7 @@ snapshots:
 
   agent-base@7.1.3: {}
 
-  ai@4.3.16(react@19.1.0)(zod@3.25.67):
+  ai@4.3.19(react@19.1.0)(zod@3.25.67):
     dependencies:
       '@ai-sdk/provider': 1.1.3
       '@ai-sdk/provider-utils': 2.2.8(zod@3.25.67)
@@ -6719,7 +6719,7 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  chalk@5.4.1: {}
+  chalk@5.6.0: {}
 
   check-error@2.1.1: {}
 
@@ -7364,7 +7364,7 @@ snapshots:
   jsondiffpatch@0.6.0:
     dependencies:
       '@types/diff-match-patch': 1.0.36
-      chalk: 5.4.1
+      chalk: 5.6.0
       diff-match-patch: 1.0.5
 
   kleur@4.1.5: {}
@@ -8042,7 +8042,7 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  swr@2.3.3(react@19.1.0):
+  swr@2.3.6(react@19.1.0):
     dependencies:
       dequal: 2.0.3
       react: 19.1.0

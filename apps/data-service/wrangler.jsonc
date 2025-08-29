@@ -53,4 +53,7 @@
 	"browser": {
 		"binding": "VIRTUAL_BROWSER",
 	},
+	"ai": {
+		"binding": "AI",
+	},
 }
