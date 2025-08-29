@@ -24,5 +24,23 @@
 			"id": "8de2bf0478814265af77a8efb9d5297d",
 			"experimental_remote": true
 		}
-	]
+	],
+	"queues": {
+		"consumers": [
+			{
+				"queue": "links-tracker-queue-stage",
+				"dead_letter_queue": "links-tracker-dead-letter-queue-stage"
+			},
+			{
+				"queue": "links-tracker-dead-letter-queue-stage",
+				"retry_delay": 0
+			}
+		],
+		"producers": [
+			{
+				"binding": "QUEUE",
+				"queue": "links-tracker-queue-stage"
+			}
+		]
+	}
 }
