@@ -1,5 +1,4 @@
 import { Hono } from 'hono';
-import { getLink } from '@repo/data-ops/queries/links';
 import { cloudflareInfoSchema } from '@repo/data-ops/zod-schema/links';
 import { getDestinationForCountry, getRoutingDestinations } from '@/helpers/route-ops';
 import { LinkClickMessageType } from '@repo/data-ops/zod-schema/queue';
