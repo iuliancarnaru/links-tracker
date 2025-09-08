@@ -7,7 +7,9 @@
     "dev-frontend": "pnpm --filter user-application run dev",
     "dev-data-service": "pnpm --filter data-service run dev",
     "stage:deploy-frontend": "pnpm i && pnpm run build-package && pnpm --filter user-application run stage:deploy",
-    "prod:deploy-frontend": "pnpm i && pnpm run build-package && pnpm --filter user-application run prod:deploy"
+    "prod:deploy-frontend": "pnpm i && pnpm run build-package && pnpm --filter user-application run prod:deploy",
+    "stage:deploy-data-service": "pnpm i && pnpm run build-package && pnpm --filter data-service run stage:deploy",
+    "prod:deploy-data-service": "pnpm i && pnpm run build-package && pnpm --filter data-service run prod:deploy"
   },
   "keywords": [],
   "author": "",
