@@ -9,16 +9,23 @@
   "compatibility_date": "2025-06-17",
   "assets": {
     "binding": "ASSETS",
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "single-page-application",
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "d1_databases": [
     {
       "binding": "DB",
       "database_id": "dda783a3-36fa-4ee7-8c37-216b90718aaa",
-      "experimental_remote": true
-    }
-  ]
+      "experimental_remote": true,
+    },
+  ],
+  "services": [
+    {
+      "binding": "BACKEND_SERVICE",
+      "service": "data-service",
+      "experimental_remote": true,
+    },
+  ],
 }
