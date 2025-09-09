@@ -9,41 +9,53 @@
   "compatibility_date": "2025-06-17",
   "assets": {
     "binding": "ASSETS",
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "single-page-application",
   },
   "observability": {
-    "enabled": true
+    "enabled": true,
   },
   "env": {
     "stage": {
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "stage.smrtlnk.org",
+        },
+      ],
       "d1_databases": [
         {
           "binding": "DB",
           "database_id": "dda783a3-36fa-4ee7-8c37-216b90718aaa",
-          "experimental_remote": true
-        }
+          "experimental_remote": true,
+        },
       ],
       "services": [
         {
           "binding": "BACKEND_SERVICE",
           "service": "data-service-stage",
-          "experimental_remote": true
-        }
-      ]
+          "experimental_remote": true,
+        },
+      ],
     },
     "production": {
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "smrtlnk.org",
+        },
+      ],
       "d1_databases": [
         {
           "binding": "DB",
-          "database_id": "6341e24c-d489-4da6-8d99-39245d869123"
-        }
+          "database_id": "6341e24c-d489-4da6-8d99-39245d869123",
+        },
       ],
       "services": [
         {
           "binding": "BACKEND_SERVICE",
-          "service": "data-service-production"
-        }
-      ]
-    }
-  }
+          "service": "data-service-production",
+        },
+      ],
+    },
+  },
 }
