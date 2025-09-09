@@ -161,7 +161,7 @@ cd apps/data-service
 pnpm stage:deploy
 ```
 
-### Production Deployment  
+### Production Deployment
 ```bash
 # Deploy frontend to production
 pnpm prod:deploy-frontend
@@ -173,7 +173,7 @@ pnpm prod:deploy
 
 ### Environment Configuration
 The project uses Cloudflare Workers with environment-specific configurations:
-- **Staging**: `--env stage` 
+- **Staging**: `--env stage`
 - **Production**: `--env production`
 
 Ensure your `wrangler.toml` files are properly configured for each environment.
@@ -217,7 +217,7 @@ pnpm test
 - **Socket.io Client** for real-time updates
 - **Vite** for fast development and building
 
-### Backend  
+### Backend
 - **Cloudflare Workers** for serverless edge computing
 - **Hono** lightweight web framework for Workers
 - **Cloudflare D1** SQLite database at the edge
@@ -230,11 +230,7 @@ pnpm test
 ### Shared/Tools
 - **TypeScript** for end-to-end type safety
 - **Better Auth** with Stripe integration for authentication
-- **Zod** for runtime schema validation  
+- **Zod** for runtime schema validation
 - **pnpm Workspaces** for monorepo management
 - **Vitest** for unit and integration testing
 - **Wrangler** for Cloudflare deployment and development
-
-## 📄 License
-
-ISC License
