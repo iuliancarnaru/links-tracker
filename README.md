@@ -234,3 +234,7 @@ pnpm test
 - **pnpm Workspaces** for monorepo management
 - **Vitest** for unit and integration testing
 - **Wrangler** for Cloudflare deployment and development
+
+## 📄 License
+
+ISC License New
