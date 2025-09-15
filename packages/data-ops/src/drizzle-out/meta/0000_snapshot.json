@@ -1,185 +1,63 @@
 {
-  "id": "00000000-0000-0000-0000-000000000000",
-  "prevId": "",
   "version": "6",
   "dialect": "sqlite",
+  "id": "4010831f-7add-417e-86e2-fa2b3b793068",
+  "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "links": {
-      "name": "links",
-      "columns": {
-        "link_id": {
-          "autoincrement": false,
-          "name": "link_id",
-          "type": "text",
-          "primaryKey": true,
-          "notNull": true
-        },
-        "account_id": {
-          "autoincrement": false,
-          "name": "account_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "destinations": {
-          "autoincrement": false,
-          "name": "destinations",
-          "type": "numeric",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "created": {
-          "default": "(CURRENT_TIMESTAMP)",
-          "autoincrement": false,
-          "name": "created",
-          "type": "numeric",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "updated": {
-          "default": "(CURRENT_TIMESTAMP)",
-          "autoincrement": false,
-          "name": "updated",
-          "type": "numeric",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "name": {
-          "autoincrement": false,
-          "name": "name",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        }
-      },
-      "compositePrimaryKeys": {},
-      "indexes": {},
-      "foreignKeys": {},
-      "uniqueConstraints": {},
-      "checkConstraints": {}
-    },
-    "link_clicks": {
-      "name": "link_clicks",
-      "columns": {
-        "id": {
-          "autoincrement": false,
-          "name": "id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "account_id": {
-          "autoincrement": false,
-          "name": "account_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "country": {
-          "autoincrement": false,
-          "name": "country",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "destination": {
-          "autoincrement": false,
-          "name": "destination",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "clicked_time": {
-          "autoincrement": false,
-          "name": "clicked_time",
-          "type": "numeric",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "latitude": {
-          "autoincrement": false,
-          "name": "latitude",
-          "type": "real",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "longitude": {
-          "autoincrement": false,
-          "name": "longitude",
-          "type": "real",
-          "primaryKey": false,
-          "notNull": false
-        }
-      },
-      "compositePrimaryKeys": {},
-      "indexes": {
-        "idx_link_clicks_id": {
-          "name": "idx_link_clicks_id",
-          "columns": [
-            "id"
-          ],
-          "isUnique": false
-        }
-      },
-      "foreignKeys": {},
-      "uniqueConstraints": {},
-      "checkConstraints": {}
-    },
     "destination_evaluations": {
       "name": "destination_evaluations",
       "columns": {
         "id": {
-          "autoincrement": false,
           "name": "id",
           "type": "text",
           "primaryKey": true,
-          "notNull": false
+          "notNull": true,
+          "autoincrement": false
         },
         "link_id": {
-          "autoincrement": false,
           "name": "link_id",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "account_id": {
-          "autoincrement": false,
           "name": "account_id",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "destination_url": {
-          "autoincrement": false,
           "name": "destination_url",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "status": {
-          "autoincrement": false,
           "name": "status",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "reason": {
-          "autoincrement": false,
           "name": "reason",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "created_at": {
-          "default": "(CURRENT_TIMESTAMP)",
-          "autoincrement": false,
           "name": "created_at",
           "type": "numeric",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(CURRENT_TIMESTAMP)"
         }
       },
-      "compositePrimaryKeys": {},
       "indexes": {
         "idx_destination_evaluations_account_time": {
           "name": "idx_destination_evaluations_account_time",
@@ -191,6 +69,457 @@
         }
       },
       "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "link_clicks": {
+      "name": "link_clicks",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "account_id": {
+          "name": "account_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "country": {
+          "name": "country",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "destination": {
+          "name": "destination",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "clicked_time": {
+          "name": "clicked_time",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "latitude": {
+          "name": "latitude",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "longitude": {
+          "name": "longitude",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "idx_link_clicks_id": {
+          "name": "idx_link_clicks_id",
+          "columns": [
+            "id"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "links": {
+      "name": "links",
+      "columns": {
+        "link_id": {
+          "name": "link_id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "account_id": {
+          "name": "account_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "destinations": {
+          "name": "destinations",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created": {
+          "name": "created",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(CURRENT_TIMESTAMP)"
+        },
+        "updated": {
+          "name": "updated",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(CURRENT_TIMESTAMP)"
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "account": {
+      "name": "account",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "account_id": {
+          "name": "account_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "provider_id": {
+          "name": "provider_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "access_token": {
+          "name": "access_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "refresh_token": {
+          "name": "refresh_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "id_token": {
+          "name": "id_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "access_token_expires_at": {
+          "name": "access_token_expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "refresh_token_expires_at": {
+          "name": "refresh_token_expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "scope": {
+          "name": "scope",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "password": {
+          "name": "password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(cast((julianday('now') - 2440587.5)*86400000 as integer))"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "account_user_id_user_id_fk": {
+          "name": "account_user_id_user_id_fk",
+          "tableFrom": "account",
+          "tableTo": "user",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "session": {
+      "name": "session",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "token": {
+          "name": "token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(cast((julianday('now') - 2440587.5)*86400000 as integer))"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "ip_address": {
+          "name": "ip_address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "user_agent": {
+          "name": "user_agent",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "session_token_unique": {
+          "name": "session_token_unique",
+          "columns": [
+            "token"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "session_user_id_user_id_fk": {
+          "name": "session_user_id_user_id_fk",
+          "tableFrom": "session",
+          "tableTo": "user",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "user": {
+      "name": "user",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "email_verified": {
+          "name": "email_verified",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "image": {
+          "name": "image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(cast((julianday('now') - 2440587.5)*86400000 as integer))"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(cast((julianday('now') - 2440587.5)*86400000 as integer))"
+        }
+      },
+      "indexes": {
+        "user_email_unique": {
+          "name": "user_email_unique",
+          "columns": [
+            "email"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "verification": {
+      "name": "verification",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "identifier": {
+          "name": "identifier",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "value": {
+          "name": "value",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(cast((julianday('now') - 2440587.5)*86400000 as integer))"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(cast((julianday('now') - 2440587.5)*86400000 as integer))"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
       "uniqueConstraints": {},
       "checkConstraints": {}
     }
@@ -201,5 +530,8 @@
     "schemas": {},
     "tables": {},
     "columns": {}
+  },
+  "internal": {
+    "indexes": {}
   }
 }
