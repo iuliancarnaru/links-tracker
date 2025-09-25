@@ -45,6 +45,11 @@
       ]
     },
     "production": {
+      "vars": {
+        "STRIPE_PRODUCT_BASIC": "price_1SAX3TD9SMHToxaGMNHY4sQb",
+        "STRIPE_PRODUCT_PRO": "price_1SAX4bD9SMHToxaGThKfx6xQ",
+        "STRIPE_PRODUCT_ENTERPRISE": "price_1SAX57D9SMHToxaGvcSc0Kzb"
+      },
       "routes": [
         {
           "custom_domain": true,
